@@ -15,7 +15,7 @@ class Solution {
             }
          }
       }
-    return new int[]{};
+    return null;
     }
 }
 
@@ -23,20 +23,19 @@ class Solution {
 Solution 2. HashMap
 
 class Solution {
-    int sum = 0;
     public int[] twoSum(int[] nums, int target) {
-        HashMap<Integer , Integer> nmap = new HashMap<>();
+        HashMap<Integer , Integer> hmap = new HashMap<>(); // O(n)
 
-        for(int i=0;i<nums.length;i++){
-            nmap.put(nums[i],i);
+        for(int i = 0 ; i < nums.length ; i++ ){
+            hmap.put(nums[i] ,i );
         }
 
-        for(int i=0;i<nums.length;i++){
+        for(int i = 0 ; i < nums.length ; i++){
             int compliment = target - nums[i];
-            if(nmap.containsKey(compliment) && nmap.get(compliment) != i){
-                return new int[]{i , nmap.get(compliment)};
+            if(hmap.containsKey(compliment) && hmap.get(compliment) != i){
+                return new int [] { i , hmap.get(compliment) };
             }
         }
-        return new int[]{};
+        return null;
     }
 }
