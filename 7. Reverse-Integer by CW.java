@@ -22,7 +22,7 @@ class Solution{
 ---------------------------------------------------------------------
 
 Solution-2.
-[ O(N) ]
+[ O(LogX) ]
 
 class Solution{
   public int reverse(int x){
